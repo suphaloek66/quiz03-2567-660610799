@@ -7,6 +7,10 @@ export interface Room {
   roomName: string;
 }
 
+export interface Payload {
+  role: string;
+}
+
 export interface Message {
   roomId: string;
   messageId: string;
@@ -17,9 +21,10 @@ export interface User {
   username: string;
   password: string;
   role: "ADMIN" | "SUPER_ADMIN";
+  studentId: string;
 }
 
-const originalDB = {
+export const originalDB = {
   rooms: [
     {
       roomId: "okhkUzffzCGMqtfC1uv6x",
